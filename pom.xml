@@ -12,6 +12,7 @@
         <module>springboot-init</module>
         <module>springboot-demo</module>
         <module>springboot-profile</module>
+        <module>springboot-mapstruct</module>
     </modules>
 
     <properties>
@@ -73,6 +74,21 @@
                 <artifactId>mybatis</artifactId>
                 <version>3.5.13</version>
                 <scope>compile</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.mapstruct</groupId>
+                <artifactId>mapstruct</artifactId>
+                <version>1.5.0.Beta1</version>
+            </dependency>
+            <dependency>
+                <groupId>org.mapstruct</groupId>
+                <artifactId>mapstruct-processor</artifactId>
+                <version>1.5.0.Beta1</version>
+            </dependency>
+            <dependency>
+                <groupId>org.projectlombok</groupId>
+                <artifactId>lombok</artifactId>
+                <version>1.18.28</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
