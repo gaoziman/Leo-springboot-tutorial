@@ -13,6 +13,7 @@
         <module>springboot-demo</module>
         <module>springboot-profile</module>
         <module>springboot-mapstruct</module>
+        <module>springboot-mysql</module>
     </modules>
 
     <properties>
@@ -89,6 +90,12 @@
                 <groupId>org.projectlombok</groupId>
                 <artifactId>lombok</artifactId>
                 <version>1.18.28</version>
+            </dependency>
+            <!--引入jdbc stater 目的是使用JDBC模板接口-->
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-jdbc</artifactId>
+                <version>${revision}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>

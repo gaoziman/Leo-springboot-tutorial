@@ -1,0 +1,61 @@
+server:
+  port: 8201
+
+
+spring:
+  datasource:
+    druid:
+      url: jdbc:mysql://localhost:3306/leo-springboot-tutorial?serverTimezone=GMT%2B8&useUnicode=true&characterEncoding=utf-8
+      username: root
+      password: root  #数据库名、用户名和密码改为自己的
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      #数据源连接池配置
+      initial-size: 5                                                                 #初始化连接大小
+      min-idle: 5                                                                     #最小连接池数量
+      max-active: 20                                                                  #最大连接池数量
+      max-wait: 60000                                                                 #获取连接时最大等待时间，单位毫秒
+      time-between-eviction-runs-millis: 60000                                        #配置间隔多久才进行一次检测，检测需要关闭的空闲连接，单位是毫秒
+      min-evictable-idle-time-millis: 300000                                          #配置一个连接在池中最小生存的时间，单位是毫秒
+      validation-query: SELECT 1 FROM DUAL                                            #测试连接
+      test-while-idle: true                                                           #申请连接的时候检测，建议配置为true，不影响性能，并且保证安全性
+      test-on-borrow: false                                                           #获取连接时执行检测，建议关闭，影响性能
+      test-on-return: false                                                           #归还连接时执行检测，建议关闭，影响性能
+      pool-prepared-statements: false                                                 #是否开启PSCache，PSCache对支持游标的数据库性能提升巨大，oracle建议开启，mysql下建议关闭
+      max-pool-prepared-statement-per-connection-size: 20                             #开启poolPreparedStatements后生效
+      filters: stat,wall
+
+      # StatViewServlet配置，说明请参考Druid Wiki，配置_StatViewServlet配置
+      stat-view-servlet:
+        enabled: true                                                                 #是否开启内置监控页面，默认值为 false
+        url-pattern: '/druid/*'                                                       #StatViewServlet 的映射路径，即内置监控页面的访问地址
+        reset-enable: true                                                            #是否启用重置按钮
+        login-username: admin                                                         #内置监控页面的登录页用户名 username
+        login-password: 123456                                                         #内置监控页面的登录页密码 password
+
+      # WebStatFilter配置，说明请参考Druid Wiki，配置_配置WebStatFilter
+      web-stat-filter:
+        enabled: true                                                                 #是否开启内置监控中的 Web-jdbc 关联监控的数据
+        url-pattern: '/*'                                                             #匹配路径
+        exclusions: '*.js,*.gif,*.jpg,*.png,*.css,*.ico,/druid/*'                     #排除路径
+        session-stat-enable: true                                                     #是否监控session
+
+      # Spring监控配置，说明请参考Druid Github Wiki，配置_Druid和Spring关联监控配置
+      aop-patterns: net.biancheng.www.*                                              #Spring监控AOP切入点，如x.y.z.abc.*,配置多个英文逗号分隔
+
+      # 对配置已开启的 filters 即 stat(sql 监控)  wall（防火墙）
+      filter:
+        #配置StatFilter (SQL监控配置)
+        stat:
+          enabled: true                                                               #开启 SQL 监控
+          slow-sql-millis: 1000                                                       #慢查询
+          log-slow-sql: true                                                          #记录慢查询 SQL
+        #配置WallFilter (防火墙配置)
+        wall:
+          enabled: true                                                               #开启防火墙
+          config:
+            update-allow: true                                                        #允许更新操作
+            drop-table-allow: false                                                   #禁止删表操作
+            insert-allow: true                                                       #允许插入操作
+            delete-allow: true                                                        #删除数据操作
+
+
