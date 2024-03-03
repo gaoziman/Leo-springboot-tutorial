@@ -14,6 +14,7 @@
         <module>springboot-profile</module>
         <module>springboot-mapstruct</module>
         <module>springboot-mysql</module>
+        <module>springboot-jdbctemplate</module>
     </modules>
 
     <properties>
