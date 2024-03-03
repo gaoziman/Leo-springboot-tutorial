@@ -15,6 +15,7 @@
         <module>springboot-mapstruct</module>
         <module>springboot-mysql</module>
         <module>springboot-jdbctemplate</module>
+        <module>springboot-mybatis</module>
     </modules>
 
     <properties>
@@ -47,7 +48,6 @@
                 <version>${revision}</version>
                 <scope>test</scope>
             </dependency>
-
             <dependency>
                 <groupId>org.projectlombok</groupId>
                 <artifactId>lombok</artifactId>
@@ -87,16 +87,16 @@
                 <artifactId>mapstruct-processor</artifactId>
                 <version>1.5.0.Beta1</version>
             </dependency>
-            <dependency>
-                <groupId>org.projectlombok</groupId>
-                <artifactId>lombok</artifactId>
-                <version>1.18.28</version>
-            </dependency>
             <!--引入jdbc stater 目的是使用JDBC模板接口-->
             <dependency>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-starter-jdbc</artifactId>
                 <version>${revision}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.mybatis.spring.boot</groupId>
+                <artifactId>mybatis-spring-boot-starter</artifactId>
+                <version>2.0.1</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
