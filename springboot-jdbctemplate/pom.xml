@@ -35,10 +35,6 @@
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
         </dependency>
-        <dependency>
-            <groupId>org.projectlombok</groupId>
-            <artifactId>lombok</artifactId>
-        </dependency>
         <!--引入jdbc stater 目的是使用JDBC模板接口-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
