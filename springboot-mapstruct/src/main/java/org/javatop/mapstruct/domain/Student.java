@@ -2,8 +2,6 @@ package org.javatop.mapstruct.domain;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
-import lombok.Getter;
-import lombok.Setter;
 
 /**
  * @author : Leo

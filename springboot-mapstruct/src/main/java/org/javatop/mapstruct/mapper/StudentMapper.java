@@ -7,6 +7,10 @@ import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
 import org.mapstruct.Mappings;
 import org.mapstruct.factory.Mappers;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+
+import java.util.List;
 
 /**
  * @author : Leo
@@ -14,7 +18,7 @@ import org.mapstruct.factory.Mappers;
  * @date 2024-02-20 13:42
  * @description :
  */
-@Mapper
+@Mapper(componentModel = "spring")
 public interface StudentMapper {
 
     StudentMapper INSTANCE = Mappers.getMapper(StudentMapper.class);
@@ -27,4 +31,6 @@ public interface StudentMapper {
             @Mapping(source = "name", target = "nameVo")
     })
     StudentVO2 tostudentVO2(Student student);
+
+    List<StudentVO> studentListVo2Dto(List<StudentVO> vo);
 }
