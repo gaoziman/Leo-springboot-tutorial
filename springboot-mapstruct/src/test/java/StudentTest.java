@@ -51,4 +51,17 @@ public class StudentTest {
         StudentVO studentVO = studentMapper.tostudentVO(student);
         System.out.println("studentVO = " + studentVO);
     }
+
+    /**
+     *  用于测试: 测试04
+     */
+    @Test
+    public void test04() {
+        // 帮我创建Student对象
+        Student student = new Student("Leo哥", 18);
+        // 帮我将Student对象转换成StudentVO对象
+        StudentVO studentVO = studentMapper.tostudentVO(student);
+        System.out.println("studentVO = " + studentVO);
+
+    }
 }
