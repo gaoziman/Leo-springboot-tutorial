@@ -16,6 +16,7 @@
         <module>springboot-mysql</module>
         <module>springboot-jdbctemplate</module>
         <module>springboot-mybatis</module>
+        <module>springboot-myabatisplus</module>
     </modules>
 
     <properties>
