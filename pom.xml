@@ -17,6 +17,7 @@
         <module>springboot-jdbctemplate</module>
         <module>springboot-mybatis</module>
         <module>springboot-myabatisplus</module>
+        <module>springboot-swagger</module>
     </modules>
 
     <properties>
