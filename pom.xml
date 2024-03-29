@@ -19,6 +19,7 @@
         <module>springboot-myabatisplus</module>
         <module>springboot-swagger</module>
         <module>springboot-minio</module>
+        <module>springboot-knife4j</module>
     </modules>
 
     <properties>
