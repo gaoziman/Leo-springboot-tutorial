@@ -20,6 +20,7 @@
         <module>springboot-swagger</module>
         <module>springboot-minio</module>
         <module>springboot-knife4j</module>
+        <module>springboot-validator</module>
     </modules>
 
     <properties>
@@ -95,6 +96,12 @@
             <dependency>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-starter-jdbc</artifactId>
+                <version>${revision}</version>
+            </dependency>
+            <!-- 引入validation -->
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-validation</artifactId>
                 <version>${revision}</version>
             </dependency>
             <dependency>
