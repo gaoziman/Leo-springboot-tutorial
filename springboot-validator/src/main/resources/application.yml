@@ -2,3 +2,16 @@
 server:
   port: 8009
 
+val:
+  name: 程序员Leo
+  age: 20
+
+
+
+
+bt:
+  v1: 公众号:程序员Leo
+  v2: 公众号:程序员Leo
+  user:
+    name: 程序员Leo
+    age: 20

@@ -19,7 +19,7 @@ public class EncryptIdValidator implements ConstraintValidator<EncryptId, String
 
     @Override
     public boolean isValid(String value, ConstraintValidatorContext context) {
-        // 不为null才进行校验
+    // 不为null才进行校验
         if (value != null) {
             Matcher matcher = PATTERN.matcher(value);
             return matcher.find();
