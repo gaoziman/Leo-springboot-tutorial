@@ -17,7 +17,7 @@ import org.springframework.core.io.support.PropertySourceFactory;
 @Data
 @Configuration
 @PropertySources({
-        @PropertySource(value = "classpath:application.properties", encoding = "utf-8",factory = YamlPropertySourceFactory.class),
+        @PropertySource(value = "classpath:application.yml", encoding = "utf-8",factory = YamlPropertySourceFactory.class),
         })
 public class ConfProperties2 {
     private String v1;
