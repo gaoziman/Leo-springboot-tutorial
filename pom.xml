@@ -22,6 +22,7 @@
         <module>springboot-knife4j</module>
         <module>springboot-validator</module>
         <module>springboot-lombok</module>
+        <module>springboot-jpa</module>
     </modules>
 
     <properties>
