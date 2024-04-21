@@ -19,7 +19,7 @@ public class MyBatisPlusApplication {
         ConfigurableApplicationContext context = SpringApplication.run(MyBatisPlusApplication.class, args);
         Environment environment = context.getBean(Environment.class);
 
-        System.out.println("访问链接：http://localhost:" + environment.getProperty("server.port"));
+        System.out.println("访问链接：http://myserver:" + environment.getProperty("server.port"));
         System.out.println("(♥◠‿◠)ﾉﾞ  项目启动成功 ლ(´ڡ`ლ)ﾞ \n");
     }
 }
