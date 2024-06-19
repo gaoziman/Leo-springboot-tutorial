@@ -23,6 +23,7 @@
         <module>springboot-validator</module>
         <module>springboot-lombok</module>
         <module>springboot-jpa</module>
+        <module>springboot-datasource</module>
     </modules>
 
     <properties>
