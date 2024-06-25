@@ -7,10 +7,7 @@ server:
 file:
   # MinIO自搭建对象存储服务
   minio:
-    endpoint: http://121.36.211.106:9000 #存储服务域名
-    accessKey: t5cTT5s7Je6BVpMCNKjK
-    secretKey: 59SPQ1Ch8NnkkEOSqS39uhqnbvLnowNJq5pPmVPy
-    bucket: gaoziman   #存储桶名称
-
-
-
+    endpoint: http://localhost:9000 #存储服务域名
+    accessKey: your-access-key #AccessKey
+    secretKey: your-secret-key #SecretKey
+    bucket: your-bucket-name   #存储桶名称

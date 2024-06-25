@@ -38,13 +38,17 @@ public class FileController {
      */
     @PostMapping("/upload")
     public String upload(@RequestParam("file") MultipartFile file) throws Exception {
-        // 上传
-        String path = UUID.randomUUID() + file.getOriginalFilename(); // 文件名，使用 UUID 随机
+        // 上传 文件名，使用 UUID 随机
+        String path = UUID.randomUUID() + file.getOriginalFilename();
         minioClient.putObject(PutObjectArgs.builder()
-                .bucket(minioConfiguration.getBucket()) // 存储桶
-                .object(path) // 文件名
-                .stream(file.getInputStream(), file.getSize(), -1) // 文件内容
-                .contentType(file.getContentType()) // 文件类型
+                // 存储桶
+                .bucket(minioConfiguration.getBucket())
+                // 文件名
+                .object(path)
+                // 文件内容
+                .stream(file.getInputStream(), file.getSize(), -1)
+                // 文件类型
+                .contentType(file.getContentType())
                 .build());
 
         // 获取访问路径
